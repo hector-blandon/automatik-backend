@@ -7,7 +7,8 @@ piezaServicio.crearPieza = async(pieza) => {
         nombre: nombre,
         cantidad: cantidad,
         valor: valor,
-        codigo: codigo
+        codigo: codigo,
+        idFabricante: idFabricante
 
     } = pieza;
     const [producto] = await piezaRepositorio.crearPieza({
@@ -15,6 +16,7 @@ piezaServicio.crearPieza = async(pieza) => {
         cantidad: cantidad,
         valor: valor,
         codigo: codigo,
+        idFabricante: idFabricante,
         idTaller: 1
     });
     if (producto !== null) {

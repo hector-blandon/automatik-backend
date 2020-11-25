@@ -158,7 +158,7 @@ emailControlador.cambiarPassword = (email, password, nombre) => {
         }
     });
 };
-
+// "C:\Users\johnw\Downloads\123456-12.pdf"
 
 emailControlador.claimVehicle = (email, documento) => {
     const mailOptions = {
@@ -167,7 +167,7 @@ emailControlador.claimVehicle = (email, documento) => {
         subject: 'Notificación entrega de vehículo',
         attachments: [{
             filename: documento + '.pdf',
-            path: process.env.HOME + '/Descargas/' + documento + '.pdf',
+            path: process.env.HOME + '/Downloads/' + documento + '.pdf',
             contentType: 'application/pdf'
         }],
         html: `<!DOCTYPE html>,
